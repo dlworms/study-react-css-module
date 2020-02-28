@@ -1,0 +1,21 @@
+:global(.jaegeun) {
+  padding: 20px;
+  background: yellow;
+}
+.header {
+  color: #fff;
+  &_title {
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+.post {
+  &_list {
+
+  }
+  &_item {
+    padding: 5px 0;
+  }
+}
