@@ -14,7 +14,8 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
 
 ## III. 적용 방법
 
-1. `scss/css` 파일 확장자를 `[파일이름].scss/css` 에서 `[파일이름].module.scss/css` 로 변경한다. 아래와 같이 스타일 정의를 하였다고 가정하자.
+1. `scss/css` 파일 확장자를 `[파일이름].scss/css` 에서 `[파일이름].module.scss/css` 로 변경한다.  
+아래와 같이 스타일 정의를 하였다고 가정하자.
     ```scss
     // JaeGeun.module.scss
     .header {
@@ -31,8 +32,9 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
     import styles from './JaeGeun.module.scss';
     ```
 
-    이후, `console.table(styles)` 을 통해 styles 객체를 확인해보면 기존 클래스명과,
-    CSS Module에 의해 생성된 클래스명( `[파일이름]_[클래스명]__hash값`)이 각각 key와 value의 형태로 생성되는 것을 확인할 수 있다.
+    이후, `console.table(styles)` 을 통해 styles 객체를 확인해보면  
+    기존 클래스명과, CSS Module에 의해 생성된 클래스명( `[파일이름]_[클래스명]__hash값`)이  
+    각각 key와 value의 형태로 생성되는 것을 확인할 수 있다.
 
     ![Untitled](https://user-images.githubusercontent.com/26413372/75600413-61f12300-5af2-11ea-9527-da432d3528be.png)
 
@@ -154,8 +156,8 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
     - reset.css
     - `.blind` 과 같이 재사용 빈도가 높은 클래스
     - Atomic components (Checkbox, Radio, Select 등)
-    - @keyframes
-    
+    - @keyframes  
+      
     ```scss
     // reset 일부
     :global(body), :global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6),
@@ -191,7 +193,7 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
     ```
     [참고] [https://github.com/harrysolovay/css-modules-css-reset/blob/master/reset.css](https://github.com/harrysolovay/css-modules-css-reset/blob/master/reset.css)
 
-- 활성화 클래스 정의 시에도 `:global` 문법을 활용하여 정의한다.
+- 활성화 클래스 정의 시에도 `:global` 문법을 활용하여 정의한다.  
 예로 `.tooltip_box--3xdqz` 에 활성화 클래스를 적용하고 싶을 경우
     ```scss
     .tooltip_box {
@@ -202,5 +204,5 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
       }
     }
     ```
-- 단어 간 구분 시, 대시 기호(`-`)를 사용할 경우 에러가 발생하므로 밑줄 문자(`_`)를 사용한다.
+- 단어 간 구분 시, 대시 기호(`-`)를 사용할 경우 에러가 발생하므로 밑줄 문자(`_`)를 사용한다.  
 (예: `.jaegeun_header`)
