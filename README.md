@@ -23,7 +23,7 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
     }
     ```
 2. `scss/css` 파일을 가져와, 모듈 객체(예시에서는 styles에 해당)로 포함하도록 `import` 구문을 변경한다.
-    ```scss
+    ```typescript
     // AS-IS
     import './JaeGeun.scss';
 
@@ -37,14 +37,14 @@ CSS를 컴포넌트 기준으로 고유하게 관리할 수 있도록 모듈화�
     ![Untitled](https://user-images.githubusercontent.com/26413372/75600413-61f12300-5af2-11ea-9527-da432d3528be.png)
 
     [렌더링 결과]
-    ```scss
+    ```html
     // AS_IS
     <div class="JaeGeun_header">
       ...
     </div>
     ```
     
-    ```scss
+    ```html
     // TO_BE
     <div class="JaeGeun_header__1hL0r">
       ...
